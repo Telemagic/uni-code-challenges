@@ -12,7 +12,33 @@ public class FizzBuzz {
      * @return
      */
     public List<String> run(final List<Integer> numbers) {
-        return new ArrayList<>();
+        final List<String> strings = new ArrayList<>();
+
+        for (final Integer number : numbers) {
+            boolean fizz = false;
+            boolean buzz = false;
+
+            String resultString = "";
+
+            if (number % 3 == 0) {
+                resultString = resultString + "Fizz";
+                fizz = true;
+            }
+
+            if (number % 5 == 0) {
+                resultString = resultString + "Buzz";
+                buzz = true;
+            }
+
+            if (!fizz && !buzz) {
+                resultString = "" + number;
+            }
+
+            System.out.println(resultString);
+            strings.add(resultString);
+        }
+
+        return strings;
     }
 
     /**
@@ -23,7 +49,39 @@ public class FizzBuzz {
      * @return
      */
     public List<String> runAdvanced(final List<Integer> numbers) {
-        return new ArrayList<>();
+        final List<String> strings = new ArrayList<>();
+
+        for (final Integer number : numbers) {
+            boolean fizz = false;
+            boolean buzz = false;
+            boolean cut = false;
+
+            String resultString = "";
+
+            if (number % 3 == 0) {
+                resultString = resultString + "Fizz";
+                fizz = true;
+            }
+
+            if (number % 5 == 0) {
+                resultString = resultString + "Buzz";
+                buzz = true;
+            }
+
+            if (number % 7 == 0) {
+                resultString = resultString + "Cut";
+                cut = true;
+            }
+
+            if (!fizz && !buzz && !cut) {
+                resultString = "" + number;
+            }
+
+            System.out.println(resultString);
+            strings.add(resultString);
+        }
+
+        return strings;
     }
 
 }
