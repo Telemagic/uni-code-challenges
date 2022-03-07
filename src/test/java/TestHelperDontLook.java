@@ -11,16 +11,19 @@ public class TestHelperDontLook {
         for (String s : list) {
             if (position % 3 == 0 && position % 5 == 0) {
                 assertEquals("Expected position " + position + " to be:", "FizzBuzz", s);
+                position++;
                 continue;
             }
 
             if (position % 3 == 0) {
                 assertEquals("Expected position " + position + " to be:", "Fizz", s);
+                position++;
                 continue;
             }
 
             if (position % 5 == 0) {
                 assertEquals("Expected position " + position + " to be:", "Buzz", s);
+                position++;
                 continue;
             }
 
@@ -37,36 +40,43 @@ public class TestHelperDontLook {
         for (String s : list) {
             if (position % 3 == 0 && position % 5 == 0 && position % 7 == 0) {
                 assertEquals("Expected position " + position + " to be:", "FizzBuzzCut", s);
+                position++;
                 continue;
             }
 
             if (position % 3 == 0 && position % 5 == 0) {
                 assertEquals("Expected position " + position + " to be:", "FizzBuzz", s);
+                position++;
                 continue;
             }
 
             if (position % 5 == 0 && position % 7 == 0) {
                 assertEquals("Expected position " + position + " to be:", "BuzzCut", s);
+                position++;
                 continue;
             }
 
             if (position % 3 == 0 && position % 7 == 0) {
-                assertEquals("Expected position " + position + " to be:", "FizzBuzzCut", s);
+                assertEquals("Expected position " + position + " to be:", "FizzCut", s);
+                position++;
                 continue;
             }
 
             if (position % 3 == 0) {
                 assertEquals("Expected position " + position + " to be:", "Fizz", s);
+                position++;
                 continue;
             }
 
             if (position % 5 == 0) {
                 assertEquals("Expected position " + position + " to be:", "Buzz", s);
+                position++;
                 continue;
             }
 
             if (position % 7 == 0) {
                 assertEquals("Expected position " + position + " to be:", "Cut", s);
+                position++;
                 continue;
             }
 
