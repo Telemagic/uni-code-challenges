@@ -14,7 +14,6 @@ public class FibonacciTest {
     @Test
     public void test_n_1() {
         assertEquals(1, fibonacci.findNthValueOfSequence(1));
-
     }
 
     @Test
