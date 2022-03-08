@@ -7,7 +7,8 @@ public class Fibonacci {
      * @return
      */
     public long findNthValueOfSequence(final long n) {
-        return 0;
+         if (n <= 1) {
+             return n;
+         }else return findNthValueOfSequence(n-1) + findNthValueOfSequence(n-2);
     }
-
 }
